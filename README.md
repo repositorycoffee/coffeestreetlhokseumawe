@@ -29,10 +29,6 @@ coffee-street/
 │ └── logo.png
 └── README.md
 
-yaml
-Salin
-Edit
-
 ---
 
 ## 🔧 Installation & Usage
