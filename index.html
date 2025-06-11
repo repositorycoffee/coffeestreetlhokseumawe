@@ -3,47 +3,56 @@
   <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Coffee Street</title>
+  <title>Coffee Street Lhokseumawe</title>
   <meta name="description" content="Nikmati kopi jalanan terbaik di Lhokseumawe bersama Kopi Street. Sajian kopi segar, nikmat, dan terjangkau dari barista berpengalaman. Temukan kami di Jl. Pasee, Komplek Pasar Buah Blok C No. 8. 
 Karena setiap hari adalah tentang kopi">
-  <meta name="keywords" content=" kopi street lhokseumawe, kopi kota lhokseumawe, kopi lhokseumawe, kopi aceh, kopi jalanan, lhokseumawe, kopi street, coffee street, street coffee">
+  <meta name="keywords" content=" kopi street lhokseumawe, kopi kota lhokseumawe, kopi lhokseumawe, kopi aceh, kopi jalanan, lhokseumawe, kopi street, coffee street, street coffee, kopi hits lhokseumawe, coffee shop lhokseumawe">
 
   <!-- Meta verifikasi untuk Google dan Bing -->
   <meta name="google-site-verification" content="iRpPgmkJunYFpQ4e2I7AbwAl6fWiB0wVvWWOwyH7pXw" />
   <meta name="msvalidate.01" content="9EACC3232B041F62B60FEDB754AE0634" />
 
-  <!-- Google Analytics (Optimized Load) -->
+  <!-- Google Analytics & Microsoft Clarity (Optimized Load on First Interaction) -->
   <script>
-  (function () {
+  function loadTrackingScripts() {
+    if (window.trackingLoaded) return;
+    window.trackingLoaded = true;
+
+    // Google Analytics
     var gaScript = document.createElement('script');
     gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-BGKBYWKVLM';
     gaScript.async = true;
     document.head.appendChild(gaScript);
-  })();
 
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BGKBYWKVLM', {
+      anonymize_ip: true,
+      page_path: window.location.pathname
+    });
+
+    // Microsoft Clarity
+    (function (c, l, a, r, i, t, y) {
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+      t = l.createElement(r); t.async = true;
+      t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "rtj86fvs1h");
   }
 
-  window.addEventListener('load', function () {
-    gtag('js', new Date());
-    gtag('config', 'G-BGKBYWKVLM');
+  // Jalankan hanya setelah interaksi pengguna
+  ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function(event) {
+    window.addEventListener(event, loadTrackingScripts, { once: true, passive: true });
   });
-</script>
+  </script>
 
-<!-- Microsoft Clarity Tracking -->
-<script>
-  (function (c, l, a, r, i, t, y) {
-    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-    t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
-    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-  })(window, document, "clarity", "script", "rtj86fvs1h");
-</script>
-  
    <!-- Favicons -->
    <link href="images/coffstreet-1.svg" rel="icon">
-	  
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
@@ -67,10 +76,11 @@ Karena setiap hari adalah tentang kopi">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
+  
   <body>
   	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Coffee<small>Street</small></a>
+	      <a class="navbar-brand" href="index.html">Coffee Street<small>Lhokseumawe</small></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -98,7 +108,7 @@ Karena setiap hari adalah tentang kopi">
     <!-- END nav -->
 
     <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image: url(images/bg_1.jpg);">
+      <div class="slider-item lazyload" style="background-image: url(images/bg_1.webp);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -114,7 +124,7 @@ Karena setiap hari adalah tentang kopi">
         </div>
       </div>
 
-      <div class="slider-item" style="background-image: url(images/bg_2.jpg);">
+      <div class="slider-item lazyload" style="background-image: url(images/bg_2.webp);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -129,7 +139,7 @@ Karena setiap hari adalah tentang kopi">
         </div>
       </div>
 
-      <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
+      <div class="slider-item lazyload" style="background-image: url(images/bg_3.webp);">
       	<div class="overlay"></div>
         <div class="container">
           <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -193,7 +203,7 @@ Karena setiap hari adalah tentang kopi">
 	
 	<!-- <!-- Section Daily -->
 	<section class="ftco-about d-md-flex">
-    	<div class="one-half img" id="section-daily" style="background-image: url(images/about.jpg);"></div>
+    	<div class="one-half img lazyload" id="section-daily" data-bg="images/about.webp" style="background-image: none;"></div>
     	<div class="one-half ftco-animate">
     		<div class="overlap">
 	        <div class="heading-section ftco-animate">
@@ -202,9 +212,9 @@ Karena setiap hari adalah tentang kopi">
 	        </div>
 	        <div>
 	    	<div class="text">
-	    	<h6>🌐 jl. Pasee, Komplek Pasar Buah, Block C No.8</h6>
+			<div class="icon"><span class="fas fa-globe-asia"></span> jl. Pasee, Komplek Pasar Buah, Block C No.8 </div>
 	    	<p>Samping Mall Pelayanan Publik (MPP) Kota Lhokseumawe - Aceh.</p>
-			<h6>⏱️ 10:00 AM - 00:00 PM WIB.</h6>
+			<div class="icon"><span class="far fa-share-square"></span> 10:00 AM - 00:00 PM WIB. </div>
 	    	</div>
 	  			</div>
   			</div>
@@ -212,8 +222,8 @@ Karena setiap hari adalah tentang kopi">
     </section>
 	
 <!-- <!-- Skala Awal -->
-    <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(images/bg_discover.jpg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
+    <section class="ftco-counter ftco-bg-dark img lazyload" id="section-counter" data-bg="images/bg_discover.webp" data-stellar-background-ratio="0.5">
+	  <div class="overlay"></div>
       <div class="container">
         <div class="row justify-content-center">
         	<div class="col-md-10">
@@ -273,7 +283,7 @@ Karena setiap hari adalah tentang kopi">
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/thru-1.jpg');">
+              <a href="blog-single.html" class="block-20 lazyload" data-bg="images/thru-1.webp" style="background-image: none;">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -287,7 +297,7 @@ Karena setiap hari adalah tentang kopi">
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/thru-2.jpg');">
+              <a href="blog-single.html" class="block-20 lazyload" data-bg="images/thru-2.webp" style="background-image: none;">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -295,13 +305,13 @@ Karena setiap hari adalah tentang kopi">
                   <div><a href="#">Outlet 2</a></div>
                  <div><a href="https://www.instagram.com/p/DHGjb05PS9Y/" class="meta-chat"><span class="icon-instagram"></span> Visit From Instagram</a></div>
                 </div>
-                 <h3 class="heading mt-2"><a href="https://maps.app.goo.gl/QG9CdWAcZrKLq5EJ9"> Jalan T. Hamzah Bendahara Depan Mesjid Islamic Centre</a></h3>
+                 <h3 class="heading mt-2"><a href="https://maps.app.goo.gl/QG9CdWAcZrKLq5EJ9"> Jalan T. Hamzah Bendahara Depan Mesjid Islamic Centre Kota Lhokseumawe</a></h3>
               </div>
             </div>
           </div>
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/thru-3.jpg');">
+               <a href="blog-single.html" class="block-20 lazyload" data-bg="images/thru-3.webp" style="background-image: none;">
               </a>
               <div class="text py-4 d-block">
               	<div class="meta">
@@ -309,7 +319,7 @@ Karena setiap hari adalah tentang kopi">
                   <div><a href="#">Outlet 3</a></div>
                   <div><a href="https://www.instagram.com/p/DHGjb05PS9Y/" class="meta-chat"><span class="icon-instagram"></span> Visit From Instagram</a></div>
                 </div>
-                <h3 class="heading mt-2"><a href="https://maps.app.goo.gl/p8KFtuNwVKcY27SU7">Jalan Darussalam & Malikussaleh</a></h3>
+                <h3 class="heading mt-2"><a href="https://maps.app.goo.gl/p8KFtuNwVKcY27SU7">Jalan Darussalam & Malikussaleh Depan Jasa Raharja Kota Lhokseumawe</a></h3>
               </div>
 			   </section>
         <div class="row mt-5">
@@ -330,7 +340,6 @@ Karena setiap hari adalah tentang kopi">
         </div>
       </div>
     </section>
-	
     </section>
 	<section class="ftco-menu">
     	<div class="container">
@@ -342,13 +351,13 @@ Karena setiap hari adalah tentang kopi">
 		  </div>
 	</section>
     <!-- <!-- Catatan Kaki -->
-	<section class="ftco-section img" id="ftco-testimony" style="background-image: url(images/footer_bg.jpg);"  data-stellar-background-ratio="0.9">
+	<section class="ftco-section img lazyload" id="ftco-testimony" data-bg="images/footer_bg.webp" data-stellar-background-ratio="0.9">
     	<div class="overlay"></div>
 	    <div class="container">
 	      <div class="row justify-content-center mb-5">
 	        <div class="col-md-7 heading-section text-center ftco-animate">
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Coffee Street Lhokseumawe. Code by <i class="icon-globe" aria-hidden="true"></i>  <a href="https://mawlanaweb.web.id/" target="_blank">Mawlanaweb</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Coffee Street Lhokseumawe. Code Collaboration By <i class="icon-globe" aria-hidden="true"></i>  <a href="https://mawlanaweb.web.id/" target="_blank">Mawlanaweb</a>
           </div>
 			 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
@@ -357,7 +366,6 @@ Karena setiap hari adalah tentang kopi">
     </footer>
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -376,6 +384,14 @@ Karena setiap hari adalah tentang kopi">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+  <script>
+  document.addEventListener('lazybeforeunveil', function(e){
+    var bg = e.target.getAttribute('data-bg');
+    if(bg){
+      e.target.style.backgroundImage = 'url(' + bg + ')';
+    }
+  });
+  </script>
   </body>
 </html>
